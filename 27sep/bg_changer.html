@@ -1,0 +1,15 @@
+<script>
+    const color =['red','green','blue','yellow','white']
+    let index = 0
+ const timer = setInterval(() => {
+    document.body.style.background = color[index];
+   index++
+
+    if(index == color.length){
+        clearInterval(timer);
+    }
+
+}, 1000);  
+color.disabled = true
+ 
+</script>

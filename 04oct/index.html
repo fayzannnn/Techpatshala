@@ -1,0 +1,32 @@
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Login</th>
+            <th>Avatar</th>
+        </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+</table>
+
+<script>
+fetch("https://api.github.com/users")
+  .then(res => res.json())
+  .then(userlist => {
+    console.table(userlist);
+
+    let output = "";
+
+    for (let user of userlist) {
+      output += `
+        <tr>
+          <td>${user.id}</td>
+          <td>${user.login}</td>
+          <td><img src="${user.avatar_url}" width="50"></td>
+        </tr>
+      `;
+    }
+
+    document.getElementById("tableBody").innerHTML = output;
+  });
+</script>

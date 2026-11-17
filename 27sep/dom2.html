@@ -1,0 +1,17 @@
+<input type="number" id="num" value="5">
+<br>
+<input type="number" id="num2" value="2">
+
+<button onclick="getAdd()">Click Me</button>
+<div id="result">This will be updated</div>
+
+<script>
+function getAdd(){
+  const  x = Number(document.getElementById("num").value)
+   const y = Number(document.getElementById("num2").value)
+    const sum = x + y;
+
+    // alert(output)
+    document.getElementById("result").innerHTML = `Additon of ${x} and ${y} is ${sum}`
+}
+</script>

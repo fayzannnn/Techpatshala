@@ -1,0 +1,18 @@
+<input type="text" id="num" value="5">
+<br>
+<button onclick="getSqr()">Click Me</button>
+<div id="result">This will be updated</div>
+
+<script>
+function getSqr(){
+    x = document.getElementById("num").value
+    output = `Square of ${x} is ${x * x}`
+    // alert(output)
+    document.getElementById("result").innerHTML = output
+}
+
+//CW1: WAP to read 2 numbers and print addition in div
+//CW2: WAP to create 4 buttons Red Green Blue Yellow and onclick of button
+// change background
+//CW3: WAP to change background color in every 1 second
+</script>
